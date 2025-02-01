@@ -18,9 +18,9 @@ namespace TestAssignment.Tests
             //Assert
             Assert.Multiple(() =>
             {
-                Assert.That(result.Items.Count, Is.GreaterThan(0), "Search results are not displayed");
+                Assert.That(result.Items.Count, Is.GreaterThan(0), "Custom Search results are empty");
                 Assert.That(result.Items[0].Snippet, Does.Contain("Selenium"),
-                    "First search result does not contain word 'Selenium'");
+                    "Custom search result does not contain word 'Selenium'");
             });
 
         }

@@ -55,13 +55,10 @@ namespace TestAssignment.Tests
             }
         }
 
-        private string[] GetBrowserArguments()
+        private static string[] GetBrowserArguments()
         {
-            if (ConfigurationProvider.Configuration["browserArguments"] != null)
-            {
-                return ConfigurationProvider.Configuration["browserArguments"].Split(",");
-            }
-            return Array.Empty<string>();
+            return 
+                ConfigurationProvider.Configuration["browserArguments"] != null ? ConfigurationProvider.Configuration["browserArguments"].Split(",") : Array.Empty<string>();
         }
     }
 }
